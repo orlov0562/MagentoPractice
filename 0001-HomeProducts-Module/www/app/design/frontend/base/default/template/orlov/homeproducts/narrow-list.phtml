@@ -25,7 +25,7 @@
                     </div>
                 </footer>
 
-                <h4><a href="<?=$productItem->getUrlPath()?>"><?=$this->htmlEscape($productItem->getName())?></a></h4>
+                <h4><a href="<?=$productItem->getProductUrl()?>"><?=$this->htmlEscape($productItem->getName())?></a></h4>
 
                 <div class="description">
                     <?php if($productItem->getSmallImage()!='no_selection'):?>
