@@ -10,8 +10,8 @@
 	на страницу "Home page" через админку
 
 Скриншоты:
-	(Главная)[screenshots/sc001.png]	
-	(Доп. страница)[screenshots/sc002.png]		
+	[Главная](screenshots/sc001.png)	
+	[Доп. страница](screenshots/sc002.png)
 	
 Версия Magento: ver. 1.8.1.0
 	
