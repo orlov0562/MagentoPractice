@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <Orlov_HomeProducts>
+            <version>1.0.0.0</version>
+        </Orlov_HomeProducts>
+    </modules>
+
+	<frontend>
+        <routers>
+            <homeproducts>
+                <use>standard</use>
+                <args>
+                    <module>Orlov_HomeProducts</module>
+                    <frontName>homeproducts</frontName>
+                </args>
+            </homeproducts>
+        </routers>
+    </frontend>
+
+    <global>
+        <blocks>
+            <homeproducts>
+                <class>Orlov_HomeProducts_Block</class>
+            </homeproducts>
+        </blocks>
+    </global>
+
+</config>

@@ -1,0 +1,49 @@
+<?php if ($productItems = $this->getProductsList() AND count($productItems)): ?>
+    <h2 class="top-sales-header"><a href="<?=Mage::getUrl('homeproducts');?>">Best products above $40</a></h2>
+
+    <section class="top-sales-block">
+    <ul>
+    <?php foreach($productItems as $productItem): isset($itemId) ? $itemId++ : $itemId=1; ?>
+        <li>
+            <article>
+
+                <footer>
+                    <div class="price">
+                        <?=Mage::helper('core')->currency($productItem->getFinalPrice())?>
+                    </div>
+
+                    <div class="addToCart">
+                        <?php if($productItem->isSaleable()): ?>
+                            <button type="button"
+                                    title="<?php echo $this->__('To Cart') ?>"
+                                    class="button btn-cart"
+                                    onclick="setLocation('<?php echo $this->helper('checkout/cart')->getAddUrl($productItem) ?>')"
+                            ><span><span><?php echo $this->__('To Cart') ?></span></span></button>
+                        <?php else: ?>
+                            <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                        <?php endif; ?>
+                    </div>
+                </footer>
+
+                <h4><a href="<?=$productItem->getUrlPath()?>"><?=$this->htmlEscape($productItem->getName())?></a></h4>
+
+                <div class="description">
+                    <?php if($productItem->getSmallImage()!='no_selection'):?>
+                        <a href="<?=$productItem->getUrlPath()?>">
+                        <img src="<?php echo $this->helper('catalog/image')->init($productItem, 'small_image')->resize(190, 75); ?>" />
+                        </a>
+                    <?php endif;?>
+                    <?=$this->htmlEscape($productItem->getShortDescription())?>
+                    <div class="description-overflow white-gradient"></div>
+                </div>
+
+            </article>
+        </li>
+        <?php if ($itemId%4==0 AND $itemId!=count($productItem)):?>
+            </ul><ul>
+        <?php endif;?>
+    <?php endforeach;?>
+    </ul>
+    </section>
+
+<?php endif; ?>

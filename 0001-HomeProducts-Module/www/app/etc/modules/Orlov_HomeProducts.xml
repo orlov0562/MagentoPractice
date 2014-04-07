@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Orlov_HomeProducts>
+			<active>true</active>
+            <codePool>local</codePool>
+        </Orlov_HomeProducts>
+    </modules>
+</config>

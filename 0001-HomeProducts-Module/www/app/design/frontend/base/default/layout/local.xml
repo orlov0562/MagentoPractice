@@ -1,0 +1,19 @@
+<layout version="1.0.0.0">
+
+<homeproducts_index_index>
+    <reference name="content">
+        <block type="homeproducts/list"  name="homeproducts.list" template="orlov/homeproducts/narrow-list.phtml" />
+    </reference>
+</homeproducts_index_index>
+
+<default>
+    <reference name="head">
+        <action method="addItem">
+            <type>skin_css</type>
+            <name>orlov/homeproducts/css/style.css</name>
+            <params/>
+        </action>
+    </reference>
+</default>
+
+</layout>
