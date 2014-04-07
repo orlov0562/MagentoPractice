@@ -5,9 +5,9 @@
 + Скопировать www в папку с установленной Magento
 	
 Дополнительные действия:
-+ Добавить тег блока 
-+ {{block type="homeproducts/list" name="homeproducts.list" template="orlov/homeproducts/list.phtml"}}
-+ на страницу "Home page" через админку
+Добавить тег блока 
+    {{block type="homeproducts/list" name="homeproducts.list" template="orlov/homeproducts/list.phtml"}}
+на страницу "Home page" через админку
 
 Скриншоты:
 + [Главная](screenshots/001.png)	
